@@ -64,9 +64,6 @@ const LoginFormEmpty = () => {
         <Text style={[styles.forgotPassword, styles.passwordTypo]}>
           Forgot password?
         </Text>
-        <Text style={[styles.showPassword, styles.passwordTypo]}>
-          Show password
-        </Text>
       </View>
       <View style={styles.title}>
         <Text style={styles.title1}>
@@ -80,9 +77,6 @@ const LoginFormEmpty = () => {
             <Text style={styles.text3}>Sign In</Text>
             <Text style={styles.lets1}>{`     `}</Text>
           </Text>
-        </Text>
-        <Text style={[styles.description, styles.registerTypo]}>
-          quis nostrud exercitation ullamco laboris nisi ut
         </Text>
       </View>
       <Image

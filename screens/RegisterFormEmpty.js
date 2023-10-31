@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image} from "react-native";
+import { Text, StyleSheet, View, Image, TextInput} from "react-native";
 
 const RegisterFormEmpty = () => {
   return (
@@ -49,7 +49,7 @@ const RegisterFormEmpty = () => {
               contentFit="cover"
               source={require("../assets/icon--email.png")}
             />
-            <Text style={[styles.text1, styles.text1Typo]}>Email</Text>
+            <TextInput style={[styles.text1, styles.text1Typo]}/>
           </View>
         </View>
         <View style={[styles.formTextEmpty1, styles.formLayout]}>

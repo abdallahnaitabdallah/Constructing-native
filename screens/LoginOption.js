@@ -1,21 +1,27 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native"; // Import useNavigation
+import { Text, StyleSheet, View, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native"; 
 
 const LoginOption = () => {
-  const navigation = useNavigation(); // Use useNavigation hook to get the navigation object
+  const navigation = useNavigation(); 
 
   const handleNavigation = () => {
-    navigation.navigate('OnboardingProductTour01');
+    navigation.navigate('LoginFormEmpty');
   };
+  const handleNavigationSignUp = () =>{
+    navigation.navigate('RegisterFormEmpty');
+  }
   return (
     <View style={styles.loginOption}>
       <Text style={styles.register}>
         <Text style={styles.dontHaveAn}>Don’t have an account?</Text>
-        <Text style={styles.text1Typo}>
-          {` `}
-          <Text style={styles.register2}>Register</Text>
-        </Text>
+        <TouchableOpacity onPress={handleNavigationSignUp}>
+          <Text style={styles.text1Typo}>
+            {` `}
+            <Text style={styles.register2}>Register</Text>
+          </Text> 
+        </TouchableOpacity>
+
       </Text>
       <View style={[styles.login, styles.loginPosition]}>
         <View style={[styles.buttonSocmed, styles.buttonLayout]}>

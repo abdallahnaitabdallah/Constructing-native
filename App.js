@@ -9,6 +9,8 @@ import OnboardingProductTour01 from './screens/OnboardingProductTour01';
 import LoginOption from "./screens/LoginOption";
 import RegisterFormEmpty from "./screens/RegisterFormEmpty";
 import LoginFormEmpty from "./screens/LoginFormEmpty";
+import AccountSetupUserEmpty from "./screens/AccountSetupUserEmpty";
+import HomeShort from "./screens/HomeShort";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -24,10 +26,16 @@ const App = () => {
     "Raleway-Regular": require("./assets/fonts/Raleway-Regular.ttf"),
     "Raleway-SemiBold": require("./assets/fonts/Raleway-SemiBold.ttf"),
     "Raleway-Bold": require("./assets/fonts/Raleway-Bold.ttf"),
+    
+    //
+    "Raleway-Medium": require("./assets/fonts/Raleway-Medium.ttf"),
 
     "Montserrat-Bold": require("./assets/fonts/Montserrat-Bold.ttf"),
     "Montserrat-Regular": require("./assets/fonts/Montserrat-Regular.ttf"),
     "Montserrat-SemiBold": require("./assets/fonts/Montserrat-SemiBold.ttf"),
+
+    //
+    "Montserrat-Medium": require("./assets/fonts/Montserrat-Medium.ttf"),
   });
 
   if (!fontsLoaded && !error) {
@@ -62,6 +70,16 @@ const App = () => {
             <Stack.Screen
               name="RegisterFormEmpty"
               component={RegisterFormEmpty}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="AccountSetupUserEmpty"
+              component={AccountSetupUserEmpty}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="HomeShort"
+              component={HomeShort}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>
