@@ -1,17 +1,19 @@
 import * as React from "react";
-import { StyleSheet, View, Text,Image } from "react-native";
+import { StyleSheet, View, Text, TextInput, Image, ScrollView} from "react-native";
 
 const AccountSetupUserEmpty = () => {
+
+  const [name, setName] = React.useState("Jonathan Anderson");
+  const [email, setEmail] = React.useState("jonathan@email.com");
+  const [mobileNumber, setMobileNumber] = React.useState("123-456-7890");
   return (
+    <ScrollView contentContainerStyle={styles.scrollViewContent}>
+
     <View style={styles.accountSetupUserEmpty}>
       <View style={[styles.form, styles.formLayout1]}>
         <View style={[styles.formTextFill, styles.formLayout]}>
           <View style={[styles.shape, styles.shapeLayout]} />
-          <Image
-            style={[styles.iconProfile, styles.iconLayout]}
-            source={require("../assets/icon--profile.svg")}
-          />
-          <Text style={[styles.text, styles.textTypo]}>Jonathan Anderson</Text>
+          <TextInput style={[styles.text, styles.textTypo]}>Jonathan Anderson</TextInput>
         </View>
         <View style={[styles.formTextDisabled, styles.formLayout]}>
           <View style={[styles.shape1, styles.shapeLayout]} />
@@ -32,7 +34,7 @@ const AccountSetupUserEmpty = () => {
               style={styles.iconCall}
               source={require("../assets/icon--call.svg")}
             />
-            <Text style={[styles.text3, styles.textTypo1]}>mobile number</Text>
+            <TextInput style={[styles.text3, styles.textTypo1]}>mobile number</TextInput>
           </View>
         </View>
         <Image
@@ -77,10 +79,19 @@ const AccountSetupUserEmpty = () => {
       <View style={[styles.accountSetupUserEmptyChild, styles.shapeLayout]} />
       <Text style={styles.text6}>Next</Text>
     </View>
+    </ScrollView>
+
   );
 };
 
 const styles = StyleSheet.create({
+  input: {
+    borderWidth: 1,
+    borderColor: "#ced4da",
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    height: 40,
+  },
   formLayout1: {
     width: 327,
     left: 24,
@@ -155,6 +166,7 @@ const styles = StyleSheet.create({
     left: "4.89%",
     top: "40%",
     position: "absolute",
+    width:200
   },
   formTextFill: {
     top: 130,
@@ -200,6 +212,7 @@ const styles = StyleSheet.create({
     color: "#a1a5c1",
     marginLeft: 10,
     textAlign: "left",
+    width: 400
   },
   layout: {
     top: 25,
@@ -322,6 +335,9 @@ const styles = StyleSheet.create({
     height: 812,
     overflow: "hidden",
     width: "100%",
+  },
+  scrollViewContent: {
+    flexGrow: 1,
   },
 });
 

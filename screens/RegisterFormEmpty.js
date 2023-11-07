@@ -1,45 +1,9 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image, TextInput} from "react-native";
+import { Text, StyleSheet, View, Image, TextInput, ScrollView} from "react-native";
 
 const RegisterFormEmpty = () => {
   return (
     <View style={styles.registerFormEmpty}>
-      <Text style={styles.login}>
-        <Text style={styles.alreadyHaveAn}>{`Already have an account? `}</Text>
-        <Text style={styles.login1}>Login</Text>
-      </Text>
-      <View style={styles.register}>
-        <View style={[styles.itemSeparator, styles.groupPosition1]}>
-          <Image
-            style={[styles.itemSeparatorChild, styles.iconChevronDownLayout]}
-            contentFit="cover"
-            source={require("../assets/vector-5.png")}
-          />
-          <View style={[styles.january122022, styles.layoutFlexBox1]}>
-            <Text style={styles.text}>OR</Text>
-          </View>
-        </View>
-        <View style={[styles.layout, styles.layoutFlexBox1]}>
-          <View style={[styles.buttonSocmed, styles.buttonLayout]}>
-            <View style={[styles.layout1, styles.layoutFlexBox]}>
-              <Image
-                style={styles.logoGoogleNormal}
-                contentFit="cover"
-                source={require("../assets/logo--google--normal.png")}
-              />
-            </View>
-          </View>
-          <View style={[styles.buttonSocmed1, styles.buttonLayout]}>
-            <View style={[styles.layout1, styles.layoutFlexBox]}>
-              <Image
-                style={styles.logoGoogleNormal}
-                contentFit="cover"
-                source={require("../assets/logo--google--normal.png")}
-              />
-            </View>
-          </View>
-        </View>
-      </View>
       <View style={[styles.form, styles.formLayout]}>
         <View style={[styles.formTextEmpty, styles.formLayout]}>
           <View style={[styles.shape, styles.shapeLayout]} />
@@ -105,6 +69,7 @@ const RegisterFormEmpty = () => {
       <View style={[styles.registerFormEmptyChild, styles.shapeLayout]} />
       <Text style={[styles.text4, styles.text4Typo]}>Register</Text>
     </View>
+    
   );
 };
 
@@ -386,7 +351,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   registerFormEmpty: {
-    borderRadius: 50,
     flex: 1,
     height: 843,
     overflow: "hidden",

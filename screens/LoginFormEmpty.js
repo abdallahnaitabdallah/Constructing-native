@@ -1,12 +1,21 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, StyleSheet, View, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native"; 
 
 const LoginFormEmpty = () => {
+  const navigation = useNavigation(); 
+
+  const handleNavigation = () => {
+    navigation.navigate('RegisterFormEmpty');
+  };
   return (
     <View style={styles.loginFormEmpty}>
       <Text style={[styles.register, styles.registerTypo]}>
         <Text style={styles.dontHaveAn}>Don’t have an account?</Text>
+        <TouchableOpacity onPress={handleNavigation}>
+
         <Text style={styles.register1}> Register</Text>
+        </TouchableOpacity>
       </Text>
       <View style={styles.login}>
         <View style={styles.buttonSocmed}>

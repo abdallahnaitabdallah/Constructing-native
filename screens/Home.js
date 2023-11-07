@@ -1,8 +1,11 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image} from "react-native";
+import { Text, StyleSheet, View, Image,ScrollView } from "react-native";
 
 const HomeShort = () => {
+  
   return (
+    <ScrollView contentContainerStyle={styles.scrollViewContent}>
+
     <View style={styles.homeShort}>
       <View style={[styles.featuredEstates, styles.featuredEstatesLayout]}>
         <View style={[styles.itemHeaderTextButton, styles.textPosition]}>
@@ -72,56 +75,13 @@ const HomeShort = () => {
           <Text style={styles.jonathan1}>Jonathan!</Text>
         </Text>
         <Text style={styles.hey}>
-          <Text style={styles.jonathan}>{` 
-`}</Text>
-          <Text style={styles.hey1}>Let's start exploring</Text>
+          <Text style={styles.jonathan}>{` `}</Text>
+          <Text style={styles.hey1}>Let's explore</Text>
           <Text style={styles.text10}>{` `}</Text>
           <Text style={styles.hey1}>{` `}</Text>
         </Text>
       </Text>
-      <Image
-        style={styles.menuHome}
-        contentFit="cover"
-        source={require("../assets/menu--home.png")}
-      />
-      <View style={[styles.buttonLocationDropdown, styles.shape1Border]}>
-        <View style={styles.layoutFlexBox}>
-          <Image
-            style={styles.iconLocation}
-            contentFit="cover"
-            source={require("../assets/icon--location.png")}
-          />
-          <Text style={styles.text4}>Jakarta, Indonesia</Text>
-          <Image
-            style={styles.iconChevronDown}
-            contentFit="cover"
-            source={require("../assets/icon--chevron--down.png")}
-          />
-        </View>
-      </View>
-      <Image
-        style={styles.buttonNotification}
-        contentFit="cover"
-        source={require("../assets/button--notification.png")}
-      />
-      <Image
-        style={[styles.groupIcon1, styles.iconLayout]}
-        contentFit="cover"
-        source={require("../assets/group1.png")}
-      />
-      <Image
-        style={[styles.ionnotificationsOutlineIcon, styles.iconLayout]}
-        contentFit="cover"
-        source={require("../assets/ionnotificationsoutline.png")}
-      />
-      <View style={styles.group1}>
-        <View style={[styles.shape1, styles.shape1Border]} />
-      </View>
-      <Image
-        style={styles.ellipseIcon}
-        contentFit="cover"
-        source={require("../assets/ellipse.png")}
-      />
+      
       <Image
         style={[styles.image25Icon, styles.image25IconLayout]}
         contentFit="cover"
@@ -228,7 +188,7 @@ Apartment`}</Text>
                 <Image
                   style={styles.iconStarSmall}
                   contentFit="cover"
-                  source={require("../assets/icon--star--small1.png")}
+                  source={require("../assets/icon--star--small.png")}
                 />
                 <Text style={[styles.text21, styles.textTypo]}>{`4.2 `}</Text>
               </View>
@@ -236,7 +196,7 @@ Apartment`}</Text>
                 <Image
                   style={styles.iconStarSmall}
                   contentFit="cover"
-                  source={require("../assets/icon--location2.png")}
+                  source={require("../assets/icon--location1.png")}
                 />
                 <Text style={[styles.text22, styles.textTypo]}>
                   Jakarta, Indonesia
@@ -247,8 +207,7 @@ Apartment`}</Text>
         </View>
       </View>
       <View style={[styles.homeShortInner, styles.homeLayout]} />
-      <Text style={[styles.text28, styles.textClr]}>{`Halloween 
-Sale!`}</Text>
+      <Text style={[styles.text28, styles.textClr]}>{`Halloween Sale!`}</Text>
       <Text style={[styles.text29, styles.textClr]}>
         All discount up to 60%
       </Text>
@@ -256,9 +215,10 @@ Sale!`}</Text>
       <Image
         style={[styles.groupIcon3, styles.groupIconLayout]}
         contentFit="cover"
-        source={require("../assets/group3.png")}
+        source={require("../assets/group2.png")}
       />
     </View>
+    </ScrollView>
   );
 };
 
@@ -788,6 +748,10 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "#fff",
   },
+  scrollViewContent: {
+    flexGrow: 1,
+  },
 });
+
 
 export default HomeShort;

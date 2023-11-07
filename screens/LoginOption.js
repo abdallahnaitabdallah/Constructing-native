@@ -48,9 +48,7 @@ const LoginOption = () => {
             contentFit="cover"
             source={require("../assets/vector-5.png")}
           />
-          <View style={[styles.january122022, styles.itemSeparatorPosition]}>
-            <Text style={styles.text}>OR</Text>
-          </View>
+          
         </View>
       </View>
       <Text style={[styles.title, styles.loginPosition]}>
