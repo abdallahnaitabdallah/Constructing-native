@@ -16,12 +16,12 @@ Before you begin, ensure you have the following software installed on your syste
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-react-native-expo-app.git
+   git clone https://github.com/abdallahnaitabdallah/Constructing-native.git
 
 2. Navigate to the project directory:
 
 ```bash
-cd your-react-native-expo-app
+cd Constructing-native.git
 ```
   
 3. Install project dependencies:
