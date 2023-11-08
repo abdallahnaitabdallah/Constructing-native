@@ -1,6 +1,6 @@
 # React Native Expo App
 
-Welcome to our React Native app built with Expo! This README will guide you through the steps to get the app up and running on your local machine.
+Welcome Reacte native expo constructing app with firebase 
 
 ## Prerequisites
 
