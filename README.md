@@ -20,16 +20,20 @@ Before you begin, ensure you have the following software installed on your syste
 
 2. Navigate to the project directory:
 
-  cd your-react-native-expo-app
+```bash
+cd your-react-native-expo-app
+```
   
 3. Install project dependencies:
-   
+
+```bash
   npm install
-  # or
+  or
   yarn
-  
+```
 4. Running the App Start the development server:
-   
+```bash
   npm start
-  # or
+  or
   yarn start
+
